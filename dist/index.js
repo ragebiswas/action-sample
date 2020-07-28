@@ -1008,7 +1008,7 @@ function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             const ms = core.getInput('milliseconds');
-            core.debug(`Waiting ${ms} milliseconds ...`); // debug is only output if you set the secret `ACTIONS_RUNNER_DEBUG` to true
+            core.info(`Waiting ${ms} milliseconds ...`); // debug is only output if you set the secret `ACTIONS_RUNNER_DEBUG` to true
             core.debug(new Date().toTimeString());
             yield wait_1.wait(parseInt(ms, 10));
             exec.exec('ls', ['-l']);
